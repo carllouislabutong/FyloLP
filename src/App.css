@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+/* ///////// CSS RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* /////////////////////////////////////////// */
+
+:root {
+  /* ////////////////////// STYLE GUIDE  ////////////////////// */
+  /* ### Primary */
+
+  --Very-Dark-Blue: hsl(243, 87%, 12%);
+  --Desaturated-Blue: hsl(238, 22%, 44%);
+
+  /* ### Accent */
+
+  --Bright-Blue: hsl(224, 93%, 58%);
+  --Moderate-Cyan: hsl(170, 45%, 43%);
+
+  /* ### Neutral */
+
+  --Light-Grayish-Blue: hsl(240, 75%, 98%);
+  --Light-Gray: hsl(0, 0%, 75%);
+
+  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+/*//////// NAV AREA */
+.main-width {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 0;
+  align-items: center;
+}
+.nav-bg {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav-area {
+  display: flex;
+  gap: 2rem;
+}
+.nav-area li {
+  list-style: none;
+  transition: 0.3s ease-in;
+}
+
+.nav-area li a {
+  text-decoration: none;
+  color: var(--Very-Dark-Blue);
+  font-family: "Raleway", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.nav-area li:hover {
+  transform: scale(1.2);
+  color: var(--Moderate-Cyan);
+}
+
+/* //////////////////////////////////////// MAIN /////////////////////////  */
+span {
+  display: block;
+}
+.first-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+}
+.first-section h1 {
+  font-size: 2.1rem;
+}
+.first-section p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+input[type="text"] {
+  padding: 0.6rem 1rem;
+  width: 250px;
+  margin-right: 2rem;
+  opacity: 0.5;
+  font-size: 0.7rem;
+  border-radius: 0.3rem;
+  border: 1px solid black;
+}
+.first-sec-inputs {
+  margin-top: 2rem;
+}
+.first-section-button {
+  background-color: var(--Bright-Blue);
+  padding: 0.6rem 1rem;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  width: 160px;
+  border: none;
+  border-radius: 0.2rem;
+  transition: 0.3s ease-in;
+}
+.first-section-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 7px 6px 1px 2px var(--Light-Grayish-Blue);
+}
+.first-sec-svg img {
+  object-fit: cover;
+  width: 700px;
+}
+.first-sec-info {
+  /* margin-right: 100px; */
+  width: 600px;
+}
+
+/*/////////////////////////////////// SECOND SECTION /////////////////////// */
+.second-section {
+  background-image: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%);
+  min-height: 300px;
+  margin-top: 200px;
+  padding: 5rem 0;
+}
+.second-section h1 {
+  font-size: 2rem;
+  color: var(--Very-Dark-Blue);
+}
+.second-section p {
+  font-weight: 600;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--Very-Dark-Blue);
+}
+.second-section .second-sec-link a {
+  font-size: 0.9rem;
+  color: var(--Moderate-Cyan);
+  text-decoration: none;
+}
+.second-sec-link {
+  margin-top: 1rem;
+  border-bottom: 1px solid var(--Moderate-Cyan);
+  max-width: fit-content;
+}
+.feedback-secondsec {
+  margin-top: 1.5rem;
+  background: var(--Light-Grayish-Blue);
+  max-width: fit-content;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  transition: 0.3s ease-in;
+}
+.feedback-secondsec:hover {
+  box-shadow: 7px 7px 10px 1px var(--Moderate-Cyan);
+  transform: translateY(-1px);
+}
+.feedback-secondsec .testimonial p {
+  color: var(--Very-Dark-Blue);
+  margin-top: 0;
+  font-size: 0.5rem;
+}
+.feedback-secondsec p {
+  color: var(--Very-Dark-Blue);
+  font-size: 0.7rem;
+  margin-top: 0;
+}
+.feedback-secondsec .testimonial h1 {
+  margin-top: 0;
+  font-size: 0.8rem;
+}
+.testimonial {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.feedback-secondsec img {
+  border-radius: 2rem;
+  height: 40px;
+  margin-right: 0.5rem;
+}
+.second-section-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.chat-image {
+  width: 50%;
+}
+.chat-image img {
+  border-radius: 2rem;
+}
+
+/* //////////////////////////////// THIRD SECTION ///////////////////////////// */
+.third-section {
+  background-color: var(--Desaturated-Blue);
+  padding: 6rem 0;
+}
+.third-sec-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.third-sec-info h1,
+p {
+  color: white;
+}
+.third-sec-info h1 {
+  font-size: 2rem;
+}
+.third-sec-info p {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+.third-sec-inputs input {
+  width: 400px;
+  min-height: 50px;
+  border: none;
+  box-shadow: 1px 1px 5px 1px black;
+  background-color: white;
+}
+.third-sec-inputs button {
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--Bright-Blue);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: none;
+  transition: 0.3s ease-in;
+}
+.third-sec-inputs button:hover {
+  box-shadow: 1px 1px 4px 1px var(--Very-Dark-Blue);
+  transform: translateY(-1px);
+}
+
+/* ////////////////////// FOOTER ////////////////////////// */
+.footer-logo {
+  display: flex;
+  color: white;
+  align-items: center;
+}
+.footer-navigation {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-logo h1 {
+  font-size: 2.5rem;
+}
+footer {
+  background-color: var(--Very-Dark-Blue);
+  padding: 6rem 0;
+}
+.footer-email,
+.footer-call {
+  display: flex;
+  gap: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+.footer-email {
+  margin-top: 1rem;
+}
+.footer-socmed {
+  display: flex;
+  gap: 2rem;
+}
+.footer-nav li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+}
